@@ -1,7 +1,0 @@
-*.pyc
-*~
-__pycache__
-myvenv
-foodservice1
-db.sqlite3
-.DS_Store
