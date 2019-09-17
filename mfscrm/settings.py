@@ -39,10 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crm',
-    'crispy_forms',
-    'mathfilters',
+    'django_extensions',
     'django.contrib.humanize',
-    'xhtml2pdf',
 ]
 
 MIDDLEWARE = [
