@@ -1,1 +1,1 @@
-web: gunicorn foodservice1.wsgi --log-file -
+web: gunicorn crm.wsgi --log-file -
