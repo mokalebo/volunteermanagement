@@ -1,2 +1,2 @@
-web: gunicorn mfscrm.wsgi --log-file -
+web: gunicorn mfscrm.wsgi:application --log-file -
 release: python manage.py migrate
