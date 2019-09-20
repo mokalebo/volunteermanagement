@@ -26,7 +26,7 @@ SECRET_KEY = '+bmf=s^5y2=n*x3*pz0vmnn%zxw6*n4(ynq^pe%srpqhwbvc71'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mavfc.herokuapp.com']
 
 
 # Application definition
