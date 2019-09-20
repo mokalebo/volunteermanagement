@@ -26,7 +26,7 @@ SECRET_KEY = '+bmf=s^5y2=n*x3*pz0vmnn%zxw6*n4(ynq^pe%srpqhwbvc71'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mavfc.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -152,11 +152,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = 'YOUR HOST USER'
-EMAIL_HOST_PASSWORD = 'YOUR HOST PASSWORD'
-EMAIL_PORT = 2525
-#EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mavfc8220@gmail.com'
+EMAIL_HOST_PASSWORD = 'roycegballerstatus1'
 
 
 try:
@@ -167,4 +168,4 @@ except ImportError:
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/home'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
