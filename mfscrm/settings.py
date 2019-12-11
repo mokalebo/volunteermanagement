@@ -26,7 +26,7 @@ SECRET_KEY = '+bmf=s^5y2=n*x3*pz0vmnn%zxw6*n4(ynq^pe%srpqhwbvc71'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['.Heroku.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -78,6 +78,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mfscrm.wsgi.application'
 
+#production
+
+# if ENVIRONMENT == 'production':
+	# SECURE_BROWSER_XSS_FILTER = True
+	# X_FRAME_OPTIONS ='DENY'
+	# SECURE_SSL_REDIRECT = TRUE
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
