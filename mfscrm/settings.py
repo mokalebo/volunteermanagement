@@ -26,7 +26,7 @@ SECRET_KEY = '+bmf=s^5y2=n*x3*pz0vmnn%zxw6*n4(ynq^pe%srpqhwbvc71'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mavfc.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'test_utils',
     'crm',
     'django_extensions',
     'crispy_forms',

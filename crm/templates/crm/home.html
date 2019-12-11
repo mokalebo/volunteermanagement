@@ -9,7 +9,7 @@
                 <div class="page-container">
 
                     <h2 class="top-menu">Hello {{ user.username }},</h2>
-                    <p>Please choose from below options.</p>
+                    <p>Please select an option.</p>
 
                 </div>
             {% endif %}
@@ -19,37 +19,61 @@
                         <div class="links">
                             <!-- Example row of columns -->
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/customer.jpg" %}" alt="customer"/>
+                                        <img src="{% static "images/volunteer.jpg" %}" alt="volunteer"/>
                                         <div class="caption">
-                                            <h2>Customer</h2>
-                                            <p>We see our success in our customers success </p>
-                                            <p><a class="btn btn-primary" href="{% url 'crm:customer_list' %}"
+                                            <h3>Volunteers</h3>
+                                            <p>We see our success in our volunteers success </p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:volunteer_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/cupcakes.jpeg" %}" alt="cupcakes"/>
+                                        <img src="{% static "images/availability.jpg" %}" alt="availability"/>
                                         <div class="caption">
-                                            <h2>Services</h2>
-                                            <p>Great Services</p>
-                                            <p><a class="btn btn-primary" href="{% url 'crm:service_list' %}"
+                                            <h3>Availabilities</h3>
+                                            <p>Tell us when you are available with your time and talents.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:availability_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="thumbnail">
-                                        <img src="{% static "images/lunch.jpeg" %}" alt="lunch"/>
+                                        <img src="{% static "images/opportunity.jpeg" %}" alt="opportunities"/>
                                         <div class="caption">
-                                            <h2>Products</h2>
-                                            <p>Great Products.</p>
-                                            <p><a class="btn btn-primary" href="{% url 'crm:product_list' %}"
+                                            <h3>Opportunities</h3>
+                                            <p>Find an Opportunity to Volunteer and Help your Community..</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:opportunity_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-md-2">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/assignment.jpeg" %}" alt="assignment"/>
+                                        <div class="caption">
+                                            <h3>Assignments</h3>
+                                            <p>Check out where and when you are volunteering.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:assignment_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="col-md-2">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/organizations.jpg" %}" alt="organizations"/>
+                                        <div class="caption">
+                                            <h3>Organizations</h3>
+                                            <p>A new way to find great local nonprofits.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:organization_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>
                                         </div>

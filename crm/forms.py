@@ -1,18 +1,29 @@
 from django import forms
-from .models import Customer
-from .models import Customer, Service, Product
+from .models import Volunteer
+from .models import Volunteer, Availability, Opportunity, Assignment, Organization
 
-class CustomerForm(forms.ModelForm):
+class VolunteerForm(forms.ModelForm):
     class Meta:
-        model = Customer
-        fields = ('cust_name', 'organization', 'role', 'bldgroom', 'account_number', 'address', 'city', 'state', 'zipcode',     'email','phone_number')
+        model = Volunteer
+        fields = ('user', 'email', 'address', 'city', 'state', 'zipcode', 'phone_number')
 
-class ServiceForm(forms.ModelForm):
+class AvailabilityForm(forms.ModelForm):
    class Meta:
-       model = Service
-       fields = ('cust_name', 'service_category', 'description', 'location', 'setup_time', 'cleanup_time', 'service_charge' )
+       model = Availability
+       fields = ('service_category', 'description', 'location', 'setup_time', 'cleanup_time' )
+       exclude = ('vol_name',)
 
-class ProductForm(forms.ModelForm):
+class OpportunityForm(forms.ModelForm):
    class Meta:
-       model = Product
-       fields = ('cust_name', 'product', 'p_description', 'quantity', 'pickup_time', 'charge' )
+       model = Opportunity
+       fields = ('organization', 'date', 'time')
+
+class AssignmentForm(forms.ModelForm):
+   class Meta:
+       model = Assignment
+       fields = ('volunteer', 'opportunity') 
+
+class OrganizationForm(forms.ModelForm):
+   class Meta:
+       model = Organization
+       fields = ('name', 'street', 'city', 'state', 'zip', 'phone')

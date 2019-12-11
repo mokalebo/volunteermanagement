@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>Maverick Food Services</title>
+    <title>Volunteer Management Services</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -63,15 +63,17 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="/">
-                Maverick Food Service
+                Volunteer Management Services
             </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="{% url 'crm:home' %}">Home</a></li>
-                <li><a href="{% url 'crm:customer_list' %}">Customers</a></li>
-               <li><a href="{% url 'crm:service_list' %}">Services</a></li>
-                <li><a href="{% url 'crm:product_list' %}">Products</a></li>
+                <li><a href="{% url 'crm:volunteer_list' %}">Volunteers</a></li>
+               <li><a href="{% url 'crm:availability_list' %}">Availabilities</a></li>
+                <li><a href="{% url 'crm:opportunity_list' %}">Opportunities</a></li>
+				<li><a href="{% url 'crm:assignment_list' %}">Assignments</a></li>
+				<li><a href="{% url 'crm:organization_list' %}">Organizations</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -102,10 +104,10 @@
                             <div class="thumbnail">
                                 <img src="{% static "images/customer.jpg" %}" alt="customer"/>
                                 <div class="caption">
-                                    <h2>Customer</h2>
-                                    <p>Delighting customers and giving them a great dining experience is our main goal. </p>
+                                    <h2>Volunteers</h2>
+                                    <p>We see our success in our volunteers success.</p>
                                     {% if user.is_authenticated %}
-                                        <p><a class="btn btn-default" href="{% url 'crm:customer_list' %}"
+                                        <p><a class="btn btn-default" href="{% url 'crm:volunteer_list' %}"
                                               role="button">View
                                             details &raquo;</a></p>
                                     {% endif %}
@@ -116,9 +118,9 @@
                             <div class="thumbnail">
                                 <img src="{% static "images/cupcakes.jpeg" %}" alt="cupcakes"/>
                                 <div class="caption">
-                                    <h2>Products</h2>
-                                    <p>High quality products at affordable prices.</p>
-                                    <p><a class="btn btn-default" href="{% url 'crm:product_list' %}"
+                                    <h2>Opportunities</h2>
+                                    <p>Find an Opportunity to Volunteer and Help your Community.</p>
+                                    <p><a class="btn btn-default" href="{% url 'crm:opportunity_list' %}"
                                            role="button">View
                                         details &raquo;</a></p>
                                 </div>
@@ -128,9 +130,31 @@
                             <div class="thumbnail">
                                 <img src="{% static "images/lunch.jpeg" %}" alt="lunch"/>
                                 <div class="caption">
-                                    <h2>Services</h2>
-                                    <p>Our food and services are second to none.</p>
-                                    <p><a class="btn btn-default" href="{% url 'crm:service_list' %}" role="button">View
+                                    <h2>Availabilities</h2>
+                                    <p>Tell us when you are available with your time and talents.</p>
+                                    <p><a class="btn btn-default" href="{% url 'crm:availability_list' %}" role="button">View
+                                        details &raquo;</a></p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="{% static "images/lunch.jpeg" %}" alt="lunch"/>
+                                <div class="caption">
+                                    <h2>Assignments</h2>
+                                    <p>Check out where and when you are volunteering.</p>
+                                    <p><a class="btn btn-default" href="{% url 'crm:assignment_list' %}" role="button">View
+                                        details &raquo;</a></p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="{% static "images/lunch.jpeg" %}" alt="lunch"/>
+                                <div class="caption">
+                                    <h2>Organizations</h2>
+                                    <p>A new way to find great local nonprofits.</p>
+                                    <p><a class="btn btn-default" href="{% url 'crm:organization_list' %}" role="button">View
                                         details &raquo;</a></p>
                                 </div>
                             </div>
