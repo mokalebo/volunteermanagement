@@ -1,10 +1,12 @@
+beautifulsoup4==4.8.1
 dj-database-url==0.5.0
-Django==2.0.5
+Django==2.1.5
 django-crispy-forms==1.7.2
 django-extensions==2.2.1
 django-heroku==0.3.1
 django-mathfilters==0.4.0
 django-taggit==0.22.2
+django-test-utils==0.3
 gunicorn==19.9.0
 html5lib==1.0.1
 Pillow==6.1.0
@@ -12,7 +14,12 @@ psycopg2==2.7.5
 PyPDF2==1.26.0
 pytz==2018.5
 reportlab==3.5.23
+selenium==3.141.0
 six==1.12.0
+soupsieve==1.9.5
+test-utils==0.1.0
+testutils==0.2.0
+urllib3==1.25.7
 webencodings==0.5.1
 whitenoise==4.0
 xhtml2pdf==0.2.3
