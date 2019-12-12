@@ -134,7 +134,7 @@ def organization_delete(request, pk):
    return redirect('crm:organization_list')
 
 @login_required
-@user_passes_test(rolemanagercheck)
+# @user_passes_test(rolemanagercheck)
 def volunteer_list(request):
     volunteer = Volunteer.objects.filter(created_date__lte=timezone.now())
     return render(request, 'crm/volunteer_list.html',
