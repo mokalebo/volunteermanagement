@@ -59,7 +59,7 @@ def assignment_new(request):
    return render(request, 'crm/assignment_new.html', {'form': form})
 
 @login_required
-@user_passes_test(rolevolunteercheck)
+# @user_passes_test(rolevolunteercheck)
 def assignment_edit(request, pk):
    assignment = get_object_or_404(Assignment, pk=pk)
    if request.method == "POST":
@@ -78,7 +78,7 @@ def assignment_edit(request, pk):
    return render(request, 'crm/assignment_edit.html', {'form': form})
    
 @login_required
-@user_passes_test(rolevolunteercheck)
+# @user_passes_test(rolevolunteercheck)
 def assignment_delete(request, pk):
    assignment = get_object_or_404(Assignment, pk=pk)
    assignment.delete()
@@ -170,7 +170,7 @@ def availability_list(request):
    return render(request, 'crm/availability_list.html', {'availabilitys': availabilitys})
 
 @login_required
-@user_passes_test(rolevolunteercheck)
+# @user_passes_test(rolevolunteercheck)
 def availability_new(request):
    if request.method == "POST":
        form = AvailabilityForm(request.POST)
@@ -188,7 +188,7 @@ def availability_new(request):
    return render(request, 'crm/availability_new.html', {'form': form})
 
 @login_required
-@user_passes_test(rolevolunteercheck)
+# @user_passes_test(rolevolunteercheck)
 def availability_edit(request, pk):
    availability = get_object_or_404(Availability, pk=pk)
    if request.method == "POST":
@@ -206,7 +206,7 @@ def availability_edit(request, pk):
    return render(request, 'crm/availability_edit.html', {'form': form})
 
 @login_required
-@user_passes_test(rolevolunteercheck)
+# @user_passes_test(rolevolunteercheck)
 def availability_delete(request, pk):
    availability = get_object_or_404(Availability, pk=pk)
    availability.delete()
